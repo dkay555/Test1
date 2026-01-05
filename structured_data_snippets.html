@@ -1,0 +1,392 @@
+<!-- ========================================
+     STRUCTURED DATA SNIPPETS FOR BABIXGO
+     Füge diese in die jeweiligen Seiten ein
+     ======================================== -->
+
+<!-- 1. ORGANIZATION SCHEMA (für index.html) -->
+<!-- Füge dies in den <head> der Startseite ein -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "babixGO",
+  "url": "https://babixgo.de",
+  "logo": "https://babixgo.de/assets/logo/babixGO-logo-hell.png",
+  "description": "Monopoly GO Services: Sticker, Partnerevents, Racers & Accounts. Schnell, zuverlässig, fair.",
+  "foundingDate": "2024",
+  "contactPoint": {
+    "@type": "ContactPoint",
+    "telephone": "+49-152-23842897",
+    "contactType": "Customer Service",
+    "availableLanguage": ["de"],
+    "contactOption": "TollFree"
+  },
+  "sameAs": [
+    "https://www.facebook.com/share/1DC2snqois/",
+    "https://wa.me/4915223842897"
+  ],
+  "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "Menden",
+    "addressRegion": "NRW",
+    "addressCountry": "DE"
+  }
+}
+</script>
+
+<!-- 2. WEBSITE SCHEMA (für index.html) -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "name": "babixGO",
+  "url": "https://babixgo.de",
+  "description": "Monopoly GO Services und Anleitungen",
+  "publisher": {
+    "@type": "Organization",
+    "name": "babixGO"
+  },
+  "potentialAction": {
+    "@type": "SearchAction",
+    "target": "https://babixgo.de/?s={search_term_string}",
+    "query-input": "required name=search_term_string"
+  }
+}
+</script>
+
+<!-- 3. LOCAL BUSINESS SCHEMA (optional - wenn als Geschäft positioniert) -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "LocalBusiness",
+  "name": "babixGO",
+  "image": "https://babixgo.de/assets/logo/babixGO-logo-hell.png",
+  "url": "https://babixgo.de",
+  "@id": "https://babixgo.de",
+  "telephone": "+49-152-23842897",
+  "email": "info@babixgo.de",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "[IHRE STRASSE]",
+    "addressLocality": "Menden",
+    "addressRegion": "NRW",
+    "postalCode": "[PLZ]",
+    "addressCountry": "DE"
+  },
+  "geo": {
+    "@type": "GeoCoordinates",
+    "latitude": 51.4362,
+    "longitude": 7.7970
+  },
+  "openingHoursSpecification": {
+    "@type": "OpeningHoursSpecification",
+    "dayOfWeek": [
+      "Monday",
+      "Tuesday",
+      "Wednesday",
+      "Thursday",
+      "Friday",
+      "Saturday",
+      "Sunday"
+    ],
+    "opens": "00:00",
+    "closes": "23:59"
+  },
+  "priceRange": "€€"
+}
+</script>
+
+<!-- 4. SERVICE SCHEMA (für Service-Seiten) -->
+<!-- Beispiel für Partner-Events -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "serviceType": "Monopoly GO Partner Events",
+  "provider": {
+    "@type": "Organization",
+    "name": "babixGO",
+    "url": "https://babixgo.de"
+  },
+  "areaServed": {
+    "@type": "Country",
+    "name": "Germany"
+  },
+  "hasOfferCatalog": {
+    "@type": "OfferCatalog",
+    "name": "Monopoly GO Services",
+    "itemListElement": [
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Partner Event - 1 Spot",
+          "description": "Ein Partner übernimmt kompletten Event-Turm"
+        },
+        "price": "8.00",
+        "priceCurrency": "EUR"
+      },
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Partner Event - 4 Spots",
+          "description": "Vier Partner übernehmen komplette Event-Türme"
+        },
+        "price": "28.00",
+        "priceCurrency": "EUR"
+      }
+    ]
+  }
+}
+</script>
+
+<!-- 5. PRODUCT SCHEMA (für Sticker) -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Product",
+  "name": "Monopoly GO Sticker",
+  "description": "Monopoly GO Sticker in verschiedenen Seltenheiten: 1-3★, 4★, 5★ und Gold",
+  "brand": {
+    "@type": "Brand",
+    "name": "babixGO"
+  },
+  "offers": [
+    {
+      "@type": "Offer",
+      "name": "1-3★ Sticker",
+      "price": "2.00",
+      "priceCurrency": "EUR",
+      "availability": "https://schema.org/InStock",
+      "seller": {
+        "@type": "Organization",
+        "name": "babixGO"
+      }
+    },
+    {
+      "@type": "Offer",
+      "name": "4★ Sticker",
+      "price": "3.00",
+      "priceCurrency": "EUR",
+      "availability": "https://schema.org/InStock",
+      "seller": {
+        "@type": "Organization",
+        "name": "babixGO"
+      }
+    },
+    {
+      "@type": "Offer",
+      "name": "5★ Sticker",
+      "price": "4.00",
+      "priceCurrency": "EUR",
+      "availability": "https://schema.org/InStock",
+      "seller": {
+        "@type": "Organization",
+        "name": "babixGO"
+      }
+    }
+  ]
+}
+</script>
+
+<!-- 6. HOW-TO SCHEMA (für Freundschaftsbalken-Anleitung) -->
+<!-- Bereits in der Anleitung vorhanden, hier erweiterte Version -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "HowTo",
+  "name": "Monopoly GO Freundschaftsbalken selber füllen",
+  "description": "Schritt-für-Schritt Anleitung zum Füllen des Freundschaftsbalkens in Monopoly GO mit VPhone und Termux",
+  "image": "https://babixgo.de/assets/img/og-default.jpg",
+  "estimatedCost": {
+    "@type": "MonetaryAmount",
+    "currency": "EUR",
+    "value": "0"
+  },
+  "totalTime": "PT20M",
+  "supply": [
+    {
+      "@type": "HowToSupply",
+      "name": "Android-Gerät"
+    },
+    {
+      "@type": "HowToSupply",
+      "name": "VPhone OS APK"
+    },
+    {
+      "@type": "HowToSupply",
+      "name": "Firefox APK"
+    },
+    {
+      "@type": "HowToSupply",
+      "name": "Termux APK"
+    },
+    {
+      "@type": "HowToSupply",
+      "name": "Freundschaftsbalken Script"
+    }
+  ],
+  "step": [
+    {
+      "@type": "HowToStep",
+      "name": "VPhone installieren",
+      "text": "Lade die VPhone APK herunter und installiere sie auf deinem Android-Gerät. Öffne die App und richte eine virtuelle Android-7-Instanz ein.",
+      "position": 1
+    },
+    {
+      "@type": "HowToStep",
+      "name": "Firefox & Termux installieren",
+      "text": "Innerhalb der VPhone-Instanz installierst du Firefox (für Downloads) und Termux (für das Script).",
+      "position": 2
+    },
+    {
+      "@type": "HowToStep",
+      "name": "Script herunterladen",
+      "text": "Lade in Firefox das freundschaftsbalken.sh Script herunter und speichere es im Termux-Verzeichnis.",
+      "position": 3
+    },
+    {
+      "@type": "HowToStep",
+      "name": "Script ausführen",
+      "text": "Öffne Termux und führe das Script mit 'bash freundschaftsbalken.sh' aus. Folge den Anweisungen im Terminal.",
+      "position": 4
+    },
+    {
+      "@type": "HowToStep",
+      "name": "Fertig!",
+      "text": "Das Script füllt automatisch den Freundschaftsbalken. Du kannst den Fortschritt in Monopoly GO verfolgen.",
+      "position": 5
+    }
+  ],
+  "author": {
+    "@type": "Organization",
+    "name": "babixGO",
+    "url": "https://babixgo.de"
+  }
+}
+</script>
+
+<!-- 7. BREADCRUMB SCHEMA (für Unterseiten) -->
+<!-- Beispiel für Freundschaftsbalken-Anleitung -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://babixgo.de"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Anleitungen",
+      "item": "https://babixgo.de/anleitungen/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "Freundschaftsbalken füllen",
+      "item": "https://babixgo.de/anleitungen/freundschaftsbalken-fuellen/"
+    }
+  ]
+}
+</script>
+
+<!-- 8. FAQ SCHEMA (für häufig gestellte Fragen) -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Ist das Füllen des Freundschaftsbalkens sicher?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Ja, die Methode ist sicher und wird von vielen Spielern genutzt. Wir empfehlen trotzdem, vorsichtig zu sein und keine sensiblen Daten in der VPhone-Instanz zu verwenden."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Wie lange dauert es?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Die Einrichtung dauert ca. 15-20 Minuten. Das eigentliche Füllen des Balkens geht dann automatisch."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Was kostet es?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Die Anleitung und alle Downloads sind kostenlos. Wenn du keine Zeit hast, bieten wir das Füllen auch als Service für 3 € an."
+      }
+    }
+  ]
+}
+</script>
+
+<!-- 9. ARTICLE SCHEMA (für Blog-Posts/Guides) -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "Monopoly GO Freundschaftsbalken selber füllen",
+  "description": "Komplette Anleitung zum Füllen des Freundschaftsbalkens in Monopoly GO - schnell, sicher und kostenlos",
+  "image": "https://babixgo.de/assets/img/og-default.jpg",
+  "datePublished": "2026-01-03",
+  "dateModified": "2026-01-04",
+  "author": {
+    "@type": "Organization",
+    "name": "babixGO"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "babixGO",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://babixgo.de/assets/logo/babixGO-logo-hell.png"
+    }
+  },
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://babixgo.de/anleitungen/freundschaftsbalken-fuellen/"
+  }
+}
+</script>
+
+<!-- ========================================
+     USAGE INSTRUCTIONS
+     ======================================== 
+     
+1. HOMEPAGE (index.html):
+   - Organization Schema
+   - Website Schema
+   - Service Schema
+   - Product Schema (Sticker)
+
+2. ANLEITUNGEN OVERVIEW (/anleitungen/):
+   - Breadcrumb Schema
+   - ItemList Schema (liste der Anleitungen)
+
+3. FREUNDSCHAFTSBALKEN GUIDE:
+   - HowTo Schema (bereits vorhanden, ersetze mit erweiterter Version)
+   - Breadcrumb Schema
+   - FAQ Schema
+   - Article Schema
+
+4. DOWNLOADS PAGE:
+   - SoftwareApplication Schema (für APKs)
+
+5. IMPRESSUM/DATENSCHUTZ:
+   - Nur WebPage Schema (kein Rich Snippet nötig)
+
+TESTING:
+- Google Rich Results Test: https://search.google.com/test/rich-results
+- Schema.org Validator: https://validator.schema.org/
+
+-->

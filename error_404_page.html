@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <title>404 - Seite nicht gefunden | babixGO</title>
+  <meta name="description" content="Die gesuchte Seite wurde nicht gefunden. Zurück zur babixGO Startseite." />
+  <meta name="robots" content="noindex, nofollow" />
+  
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Inter:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/assets/css/style.css" />
+  
+  <style>
+    .error-hero {
+      text-align: center;
+      padding: 40px 0;
+    }
+    
+    .error-code {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 120px;
+      font-weight: 700;
+      line-height: 1;
+      margin: 0;
+      background: linear-gradient(135deg, var(--primary), var(--accent));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      animation: glow 2s ease-in-out infinite;
+    }
+    
+    @keyframes glow {
+      0%, 100% { opacity: 1; }
+      50% { opacity: 0.7; }
+    }
+    
+    .error-message {
+      font-size: 24px;
+      margin: 20px 0;
+      color: var(--text);
+    }
+    
+    .error-submessage {
+      font-size: 16px;
+      color: var(--muted);
+      margin-bottom: 30px;
+    }
+    
+    .error-actions {
+      display: flex;
+      gap: 12px;
+      justify-content: center;
+      flex-wrap: wrap;
+      margin-top: 30px;
+    }
+    
+    .error-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 12px 24px;
+      border-radius: 12px;
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 14px;
+      transition: all .2s;
+    }
+    
+    .error-btn-primary {
+      background: var(--primary);
+      color: var(--on-primary);
+    }
+    
+    .error-btn-primary:hover {
+      background: var(--primary-hover);
+      transform: translateY(-2px);
+      box-shadow: 0 4px 12px rgba(74, 212, 243, .3);
+    }
+    
+    .error-btn-secondary {
+      background: var(--surface-1);
+      color: var(--accent);
+      border: 1px solid var(--stroke);
+    }
+    
+    .error-btn-secondary:hover {
+      background: var(--surface-2);
+      border-color: var(--primary);
+    }
+    
+    .dice-animation {
+      font-size: 60px;
+      margin: 20px 0;
+      animation: roll 2s ease-in-out infinite;
+    }
+    
+    @keyframes roll {
+      0%, 100% { transform: rotate(0deg); }
+      25% { transform: rotate(90deg); }
+      50% { transform: rotate(180deg); }
+      75% { transform: rotate(270deg); }
+    }
+    
+    @media (max-width: 480px) {
+      .error-code {
+        font-size: 80px;
+      }
+      
+      .error-message {
+        font-size: 20px;
+      }
+      
+      .error-actions {
+        flex-direction: column;
+      }
+      
+      .error-btn {
+        width: 100%;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="box">
+    
+    <!-- HEADER -->
+    <header class="site-header">
+      <h1>
+        <a href="/" style="text-decoration:none;" aria-label="Zur Startseite">
+          <span class="logo-babix">babix</span><span class="logo-go">GO</span>
+        </a>
+      </h1>
+      <div class="sub">Seite nicht gefunden</div>
+    </header>
+
+    <!-- ERROR HERO -->
+    <div class="error-hero">
+      <div class="dice-animation">🎲</div>
+      <h2 class="error-code">404</h2>
+      <p class="error-message">Ups! Würfel ins Leere geworfen</p>
+      <p class="error-submessage">
+        Die gesuchte Seite existiert nicht oder wurde verschoben.
+      </p>
+    </div>
+
+    <!-- SUGGESTIONS -->
+    <section class="block">
+      <h2>
+        <span class="h2-left">
+          🧭 Wohin möchtest du?
+        </span>
+      </h2>
+      
+      <div class="error-actions">
+        <a href="/" class="error-btn error-btn-primary">
+          🏠 Zur Startseite
+        </a>
+        <a href="/anleitungen/" class="error-btn error-btn-secondary">
+          📚 Anleitungen
+        </a>
+        <a href="/downloads/" class="error-btn error-btn-secondary">
+          ⬇️ Downloads
+        </a>
+      </div>
+    </section>
+
+    <!-- POPULAR PAGES -->
+    <section class="block">
+      <h2>
+        <span class="h2-left">
+          ⭐ Beliebte Seiten
+        </span>
+      </h2>
+      
+      <div class="line">
+        <span>Partner-Events</span>
+        <span class="price">
+          <a href="/#partner" style="color:var(--accent);">Infos & Preise</a>
+        </span>
+      </div>
+      
+      <div class="line">
+        <span>Racers</span>
+        <span class="price">
+          <a href="/#racers" style="color:var(--accent);">Zum Service</a>
+        </span>
+      </div>
+      
+      <div class="line">
+        <span>Sticker</span>
+        <span class="price">
+          <a href="/#sticker" style="color:var(--accent);">Preisübersicht</a>
+        </span>
+      </div>
+      
+      <div class="line">
+        <span>Freundschaftsbalken Anleitung</span>
+        <span class="price">
+          <a href="/anleitungen/freundschaftsbalken-fuellen/" style="color:var(--accent);">Zum Guide</a>
+        </span>
+      </div>
+    </section>
+
+    <!-- SEARCH HELP -->
+    <section class="block">
+      <h2>
+        <span class="h2-left">
+          🔍 Suchst du etwas Bestimmtes?
+        </span>
+      </h2>
+      
+      <p class="desc">
+        Falls du eine bestimmte Information suchst, schreib uns einfach:
+      </p>
+      
+      <div class="line">
+        <span>WhatsApp:</span>
+        <span class="price">
+          <a href="https://wa.me/4915223842897" target="_blank" rel="noopener" class="link-whatsapp">
+            Nachricht senden
+          </a>
+        </span>
+      </div>
+      
+      <div class="line">
+        <span>Facebook:</span>
+        <span class="price">
+          <a href="https://www.facebook.com/share/1DC2snqois/" target="_blank" rel="noopener" class="link-facebook">
+            Community
+          </a>
+        </span>
+      </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+      <div class="footer-brand">
+        <div class="footer-logo">
+          <span class="logo-babix">babix</span><span class="logo-go">GO</span>
+        </div>
+        <div class="footer-claim">Monopoly GO seit dem 1. Würfelwurf.</div>
+      </div>
+
+      <div class="footer-grid">
+        <div class="footer-col">
+          <h4>Startseite</h4>
+          <ul>
+            <li><a href="/#partner">Partner</a></li>
+            <li><a href="/#racers">Racers</a></li>
+            <li><a href="/#sticker">Sticker</a></li>
+            <li><a href="/#accounts">Accounts</a></li>
+            <li><a href="/#wuerfel">Würfel</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Kontakt</h4>
+          <ul>
+            <li><a href="https://wa.me/4915223842897" target="_blank" rel="noopener" class="link-whatsapp">WhatsApp</a></li>
+            <li><a href="https://www.facebook.com/share/1DC2snqois/" target="_blank" rel="noopener" class="link-facebook">Facebook</a></li>
+            <li><a href="mailto:info@babixgo.de">E-Mail</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Anleitungen</h4>
+          <ul>
+            <li><a href="/anleitungen/freundschaftsbalken-fuellen/">Freundschaftsbalken</a></li>
+            <li><a href="/anleitungen/">Alle Anleitungen</a></li>
+          </ul>
+
+          <h4 style="margin-top:16px;">Downloads</h4>
+          <ul>
+            <li><a href="/downloads/">Alle Downloads</a></li>
+          </ul>
+
+          <h4 style="margin-top:16px;">Rechtliches</h4>
+          <ul>
+            <li><a href="/impressum/">Impressum</a></li>
+            <li><a href="/datenschutz/">Datenschutz</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        © <span class="year-auto"></span> babixgo.de
+      </div>
+    </footer>
+
+  </div>
+
+  <script>
+    document.querySelectorAll('.year-auto').forEach(el => {
+      el.textContent = new Date().getFullYear();
+    });
+    
+    // Track 404 errors (optional - only if analytics loaded)
+    if (typeof gtag !== 'undefined') {
+      gtag('event', 'page_view', {
+        page_title: '404 - Not Found',
+        page_path: window.location.pathname
+      });
+    }
+  </script>
+</body>
+</html>
