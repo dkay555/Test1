@@ -26,28 +26,7 @@ structuredData: |
   }
   </script>
 ---
-<body>
-  <div class="box">
-    <!-- ===== HEADER ===== -->
-    <header class="site-header">
-      <h1>
-        <a href="/" style="text-decoration:none;" aria-label="Zur Startseite">
-          <span class="logo-babix">babix</span><span class="logo-go">GO</span>
-        </a>
-      </h1>
-      <div class="sub">Anleitungen · Accounts · Sticker</div>
-
-      <nav class="nav" aria-label="Hauptnavigation">
-        <a href="/#partner">Partner</a>
-        <a href="/#racers">Racers</a>
-        <a href="/#sticker">Sticker</a>
-        <a href="/downloads/">Downloads</a>
-        <a href="https://wa.me/4915223842897" target="_blank" rel="noopener" class="link-whatsapp">Kontakt</a>
-      </nav>
-    </header>
-
-    <!-- ===== CONTENT ===== -->
-    <main>
+<main>
       <section class="block">
         <h2>
           <span class="h2-left">
@@ -76,7 +55,7 @@ structuredData: |
       <section class="block">
         <h2>
           <span class="h2-left">
-            <img src="./assets/icons/download.svg" class="icon" alt="" onerror="this.style.display='none'">
+            <img src="/assets/icons/download.svg" class="icon" alt="" onerror="this.style.display='none'">
             Benötigte Downloads
           </span>
           <a class="more" href="/downloads/">Alle Downloads</a>
@@ -244,116 +223,3 @@ structuredData: |
         </div>
       </section>
     </main>
-
-    <!-- ===== FOOTER ===== -->
-    <footer class="footer">
-      <div class="footer-brand">
-        <div class="footer-logo">
-          <span class="logo-babix">babix</span><span class="logo-go">GO</span>
-        </div>
-        <div class="footer-claim">Monopoly GO seit dem 1. Würfelwurf.</div>
-      </div>
-
-      <div class="footer-grid">
-        <div class="footer-col">
-          <h4>Startseite</h4>
-          <ul>
-            <li><a href="/#partner">Partner</a></li>
-            <li><a href="/#racers">Racers</a></li>
-            <li><a href="/#sticker">Sticker</a></li>
-            <li><a href="/#accounts">Accounts</a></li>
-            <li><a href="/#wuerfel">Würfel</a></li>
-          </ul>
-        </div>
-
-        <div class="footer-col">
-          <h4>Kontakt</h4>
-          <ul>
-            <li><a href="https://wa.me/4915223842897" target="_blank" rel="noopener" class="link-whatsapp">WhatsApp</a></li>
-            <li><a href="https://www.facebook.com/share/1DC2snqois/" target="_blank" rel="noopener" class="link-facebook">Facebook</a></li>
-            <li><a href="mailto:info@babixgo.de">E-Mail</a></li>
-          </ul>
-        </div>
-
-        <div class="footer-col">
-          <h4>Anleitungen</h4>
-          <ul>
-            <li><a href="/anleitungen/freundschaftsbalken-fuellen/">Freundschaftsbalken</a></li>
-            <li><a href="/anleitungen/">Alle Anleitungen</a></li>
-          </ul>
-
-          <h4 style="margin-top:16px;">Downloads</h4>
-          <ul>
-            <li><a href="/downloads/">Alle Downloads</a></li>
-          </ul>
-
-          <h4 style="margin-top:16px;">Rechtliches</h4>
-          <ul>
-            <li><a href="/impressum/">Impressum</a></li>
-            <li><a href="/datenschutz/">Datenschutz</a></li>
-          </ul>
-        </div>
-      </div>
-
-      <div class="footer-bottom">
-        © <span class="year-auto"></span> babixgo.de
-      </div>
-    </footer>
-  </div>
-
-  <script>
-    // Jahr automatisch
-    document.querySelectorAll('.year-auto').forEach(el => {
-      el.textContent = new Date().getFullYear();
-    });
-  </script>
-
-  <!-- Cookie Consent Banner -->
-  <div id="cookieConsent" class="cookie-consent">
-    <div class="cookie-content">
-      <p>
-        🍪 Wir verwenden Cookies und ähnliche Technologien (Google Analytics, Facebook Pixel), 
-        um die Nutzung unserer Website zu analysieren und zu verbessern. 
-        <a href="/datenschutz/" class="cookie-link">Mehr Infos</a>
-      </p>
-      <div class="cookie-buttons">
-        <button class="cookie-btn cookie-btn-accept" onclick="acceptCookies()">
-          Alle akzeptieren
-        </button>
-        <button class="cookie-btn cookie-btn-decline" onclick="declineCookies()">
-          Nur notwendige
-        </button>
-      </div>
-    </div>
-  </div>
-  
-  <script>
-  (function() {
-    const consent = localStorage.getItem('cookie-consent');
-    
-    if (!consent) {
-      setTimeout(() => {
-        document.getElementById('cookieConsent').classList.add('show');
-      }, 1000);
-    } else if (consent === 'accepted') {
-      loadTrackingScripts();
-    }
-  })();
-  
-  function acceptCookies() {
-    localStorage.setItem('cookie-consent', 'accepted');
-    document.getElementById('cookieConsent').classList.remove('show');
-    loadTrackingScripts();
-  }
-  
-  function declineCookies() {
-    localStorage.setItem('cookie-consent', 'declined');
-    document.getElementById('cookieConsent').classList.remove('show');
-  }
-  
-  function loadTrackingScripts() {
-    // Placeholder for tracking scripts
-    // TODO: Add actual tracking IDs when ready
-  }
-  </script>
-</body>
