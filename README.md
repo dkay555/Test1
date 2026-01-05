@@ -86,14 +86,16 @@ org-web1/
 2. **Upload `dist/` contents to Strato:**
    - Connect via FTP/SFTP to your Strato hosting
    - Navigate to your webroot directory (usually `/` or `/public_html/`)
-   - Upload **all contents** from the `dist/` folder
-   - Make sure `.htaccess` is included (if present)
+   - Upload **all contents** from the `dist/` folder (including `.htaccess`)
+   - **Important**: `.htaccess` must be uploaded to enable redirects and caching
 
 3. **Verify deployment:**
    - Visit your domain
    - Check that all pages load correctly
+   - Test old URLs redirect (e.g., `/impressum_page.html` → `/impressum/`)
    - Test CSS and images
    - Verify 404 page works
+   - Check that `.htaccess` is active (proper caching headers, redirects)
 
 ### File Transfer Options
 - FTP client (FileZilla, Cyberduck, etc.)
@@ -144,11 +146,46 @@ Edit the partials in `src/_includes/partials/`:
 The `dist/` folder contains:
 - Static HTML files
 - CSS and assets
-- robots.txt
+- `.htaccess` (Apache configuration with redirects and caching)
+- `robots.txt`
+- `sitemap.xml`
 - Public downloads folder
 - 404.html
 
 **Note:** The `dist/` folder is excluded from git via `.gitignore`.
+
+## 🔒 Apache/Strato Features (Phase 3)
+
+The generated `.htaccess` file provides:
+
+### URL Redirects
+- **301 redirects** for old v1 URLs:
+  - `/impressum_page.html` → `/impressum/`
+  - `/datenschutz_page.html` → `/datenschutz/`
+- Clean URL handling (removes `index.html` from URLs)
+
+### Caching Strategy
+- **HTML files**: No cache (always fresh)
+- **CSS/JS**: 1 month cache
+- **Images/Fonts**: 3 months cache (moderate, no aggressive caching)
+- All wrapped in `<IfModule>` for safety
+
+### Compression
+- **mod_deflate** enabled (if available) for:
+  - HTML, CSS, JavaScript
+  - JSON, XML
+  - SVG images
+
+### Security Headers
+- `X-Content-Type-Options: nosniff`
+- `X-Frame-Options: SAMEORIGIN`
+- `Referrer-Policy: strict-origin-when-cross-origin`
+- All headers wrapped in `<IfModule>` blocks
+
+### Error Handling
+- Custom 404 error page (`/404.html`)
+
+**Note:** All Apache directives are wrapped in `<IfModule>` blocks to prevent errors if modules are unavailable on Strato.
 
 ## 🚫 What NOT to Commit
 
